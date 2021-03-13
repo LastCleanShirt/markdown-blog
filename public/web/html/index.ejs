@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/web/css/bootstrap.css">
+  <link rel="stylesheet" href="/web/css/indexstyle.css">
+  </head>
+  <body>
+      <div class="container-sm border-rounded" style="max-width: 100%;">
+         <div class="position-absolute top-0 start-0 translate-middle">
+            <h1>Blog</h1>
+            
+         </div>
+         <div class="container-sm border-rounded" style="max-width: 80%;">
+             <div class="row justify-content-center" id="blog_list" style="max-height: 90%;">
+                 <% data_.forEach(function (data) { %>
+                     <div class="card" style="width: 18rem;">
+                         <div class="card-body">
+                           <h5 class="card-title"><%= data["title"] %></h5>
+                           <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                           <a href="<%= data["link"] %>" class="card-link">Link</a>
+                           <!-- <a href="#" class="card-link">Another link</a> -->
+                         </div>
+                     </div>
+                 <% }) %>
+             </div>
+         </div>
+      </div>
+  </body>
+</html>
