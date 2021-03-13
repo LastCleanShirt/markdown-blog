@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/web/css/bootstrap.css">
+  <link rel="stylesheet" href="/web/css/indexstyle.css">
+  </head>
+  <body>
+      <div class="container-sm border-rounded" style="max-width: 80%;">
+          <form action="http://localhost:3000/submitBlogArticle" method="POST">
+            <div class="input-group mb-3">
+                <h1>Upload Markdown Blog Article</h1>
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Admin Password" aria-label="adminpassword" name="adminpassword" required></input>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Title" aria-label="title" name="title" required></input>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Markdown Code for Blog Article" id="floatingTextarea" name="markdowncode"></textarea>
+              <label for="floatingTextarea">Markdown Code for Blog Article</label>
+            </div>
+            <button type="submit" class="btn btn-primary" href="http://localhost:3000/">Add</button>
+          </form>
+      </div>
+  </body>
+</html>
